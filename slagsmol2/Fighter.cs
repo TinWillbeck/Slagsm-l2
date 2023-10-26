@@ -5,10 +5,11 @@
     public int hp = 100;
     
 
-    public void attack(Fighter target)
+    public int attack(Fighter target)
     {
         int damage = weapon.damageAmmount();
         target.hp -= damage;
+        return damage;
         
     }
 

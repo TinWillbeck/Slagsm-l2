@@ -23,10 +23,10 @@ Console.Clear();
 while(fighter1.hp > 0 && fighter2.hp > 0)
 {
     Console.WriteLine($"{fighter1.name} HP:{fighter1.hp}, {fighter2.name} HP:{fighter2.hp}");
-    fighter1.attack(fighter2);
-    Console.WriteLine($"{fighter1.name} gjorde {fighter1.weapon.damageAmmount()} skada");
-    fighter2.attack(fighter1);
-    Console.WriteLine($"{fighter2.name} gjorde {fighter2.weapon.damageAmmount()} skada");
+    int dmg1 = fighter1.attack(fighter2);
+    Console.WriteLine($"{fighter1.name} gjorde {dmg1} skada");
+    int dmg2 = fighter2.attack(fighter1);
+    Console.WriteLine($"{fighter2.name} gjorde {dmg2} skada");
 
     Console.WriteLine("Tryck ENTER för att gå vidare");
     Console.ReadLine();
